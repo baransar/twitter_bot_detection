@@ -3,21 +3,21 @@ Bu proje; Twitter bot hesaplarını algılayan, FastAPI ve MongoDB kullanılarak
 ## API Endpoints
 <h3> GET /classify_bots </h3>
 
-<h4> Açıklama: </h4> <p>Twitter hesabının bot olup olmamamısını sınıflandırır.</p>
+<h4> Açıklama:</h4>Twitter hesabının bot olup olmamamısını sınıflandırır.
 
 ### Parametereler:
 
-<strong> screen_name: </strong> <p> Twitter hesabının ekran ismi. Gerekli. </p>
+<strong> screen_name:</strong> Twitter hesabının ekran ismi. Gerekli.
 
-<strong> description: </strong> <p> Twitter hesabının açıklaması. Gerekli. </p>
+<strong> description:</strong> Twitter hesabının açıklaması. Gerekli.
 
-<strong> location: </strong> <p> Twitter hesabının lokasyonu. Opsiyonel. </p>
+<strong> location:</strong> Twitter hesabının lokasyonu. Opsiyonel.
 
-<strong> verified: </strong> <p> Twitter hesabının doğrulanıp doğrulanmadığı. Gerekli. </p>
+<strong> verified:</strong> Twitter hesabının doğrulanıp doğrulanmadığı. Gerekli.
 
-<h3> Çevirdiği: </h3>
+<h4> Çevirdiği: </h4>
 
-<p> <strong> is_bot: </strong>  Twitter hesabının bot olarak sınıflandırılıp sınıflandırılmadığını gösteren bir boolean değeri.</p>
+<p> <strong> is_bot: </strong>Twitter hesabının bot olarak sınıflandırılıp sınıflandırılmadığını gösteren bir boolean değeri.</p>
 
 <h5> Örnek Request: </h5>
 
@@ -40,10 +40,9 @@ python client.py
 ```
 <h3> GET /bot_ids </h3>
 
-<h4> Açıklama: </h4> <p>Veritabanındaki tüm bot sınıflandırma id'lerinin bir listesini alır.</p>
+<h4> Açıklama: </h4><p>Veritabanındaki tüm bot sınıflandırma id'lerinin bir listesini alır.</p>
 
-<h3> Çevirdiği: </h3> 
-<p>Veritabanındaki bot sınıflandırma id'lerinin bir listesi.</p>
+<h4> Çevirdiği: </h4><p>Veritabanındaki bot sınıflandırma id'lerinin bir listesi.</p>
 
 <h5> Örnek Request: </h5>
 
@@ -62,28 +61,28 @@ curl --location --request GET 'http://localhost:8000/bot_ids'
 ```
 <h3>GET /bot_results/{id}</h3>
 
-<h4> Açıklama: </h4> <p>Spesifik id'nin bot sınıflandırma sonuçlarını gösterir.</p>
+<h4> Açıklama: </h4>Spesifik id'nin bot sınıflandırma sonuçlarını gösterir.
 
 ### Parametereler:
 
-<strong> id: </strong> <p> Alınacak bot sınıflandırma sonucunun kimliği.</p>
+<strong> id: </strong> Alınacak bot sınıflandırma sonucunun kimliği.
 
-<strong> screen_name:</strong> <p>Twitter hesabının ekran ismi</p>
+<strong> screen_name:</strong> Twitter hesabının ekran ismi
 
-<strong> description:</strong> <p>Twitter hesabının açıklaması.</p>
+<strong> description:</strong> Twitter hesabının açıklaması.
 
-<strong> location:</strong> <p>Twitter hesabının lokasyonu.</p>
+<strong> location:</strong> Twitter hesabının lokasyonu.
 
-<strong> verified:</strong> <p>Twitter hesabının doğrulanıp doğrulanmadığı.</p>
+<strong> verified:</strong> Twitter hesabının doğrulanıp doğrulanmadığı.
 
-<strong> is_bot:</strong> <p>Twitter hesabının bot olarak sınıflandırılıp sınıflandırılmadığını gösteren bir boolean değeri.</p>
+<strong> is_bot:</strong> Twitter hesabının bot olarak sınıflandırılıp sınıflandırılmadığını gösteren bir boolean değeri.
 
-<h5> Örnek Request: </h5>
+<h5> Örnek Request:</h5>
 
 ```
 curl --location --request GET 'http://localhost:8000/bot_results/611b461c5d36e5b5f150ed11'
 ```
-<h5> Örnek Response: </h5>
+<h5> Örnek Response:</h5>
 
 ```
 {
